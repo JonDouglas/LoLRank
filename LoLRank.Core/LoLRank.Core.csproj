@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EDF48BF-6FA0-49D4-8F4D-6B87F0035173}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoLRank.Core</RootNamespace>
+    <AssemblyName>LoLRank.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Constants\ApiKeyConst.cs" />
+    <Compile Include="Constants\DomainConst.cs" />
+    <Compile Include="Constants\GameModesConst.cs" />
+    <Compile Include="Constants\GameTypesConst.cs" />
+    <Compile Include="Constants\MapNamesEnum.cs" />
+    <Compile Include="Constants\MatchMakingQueuesEnum.cs" />
+    <Compile Include="Constants\RuneSlotsEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Responses\AggregatedStatDto.cs" />
+    <Compile Include="Responses\ChampionDto.cs" />
+    <Compile Include="Responses\ChampionListDto.cs" />
+    <Compile Include="Responses\ChampionStatDto.cs" />
+    <Compile Include="Responses\ChampionStatsDto.cs" />
+    <Compile Include="Responses\GameDto.cs" />
+    <Compile Include="Responses\LeagueDto.cs" />
+    <Compile Include="Responses\LeagueItemDto.cs" />
+    <Compile Include="Responses\MasteryPageDto.cs" />
+    <Compile Include="Responses\MasteryPagesDto.cs" />
+    <Compile Include="Responses\MatchHistorySummaryDto.cs" />
+    <Compile Include="Responses\MessageOfDayDto.cs" />
+    <Compile Include="Responses\MiniSeriesDto.cs" />
+    <Compile Include="Responses\PlayerDto.cs" />
+    <Compile Include="Responses\PlayerStatsSummaryDto.cs" />
+    <Compile Include="Responses\PlayerStatsSummaryListDto.cs" />
+    <Compile Include="Responses\RankedStatsDto.cs" />
+    <Compile Include="Responses\RawStatDto.cs" />
+    <Compile Include="Responses\RecentGamesDto.cs" />
+    <Compile Include="Responses\RosterDto.cs" />
+    <Compile Include="Responses\RuneDto.cs" />
+    <Compile Include="Responses\RunePageDto.cs" />
+    <Compile Include="Responses\RunePagesDto.cs" />
+    <Compile Include="Responses\RuneSlotDto.cs" />
+    <Compile Include="Responses\SummonerDto.cs" />
+    <Compile Include="Responses\SummonerNameDto.cs" />
+    <Compile Include="Responses\SummonerNameListDto.cs" />
+    <Compile Include="Responses\TalentDto.cs" />
+    <Compile Include="Responses\TeamDto.cs" />
+    <Compile Include="Responses\TeamIdDto.cs" />
+    <Compile Include="Responses\TeamMemberInfoDto.cs" />
+    <Compile Include="Responses\TeamStatDetailDto.cs" />
+    <Compile Include="Responses\TeamStatSummaryDto.cs" />
+    <Compile Include="Services\ILeagueOfLegendsApiService.cs" />
+    <Compile Include="Services\LeagueOfLegendsApiService.cs" />
+    <Compile Include="ViewModels\FirstViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cheesebaron.MvxPlugins.ModernHttpClient">
+      <HintPath>..\..\..\..\GitHub\Cheesebaron.MvxPlugins\ModernHttpClient\Core\obj\Debug\Cheesebaron.MvxPlugins.ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1-beta1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1-beta1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.1.1-beta1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.1.1-beta1\lib\portable-win+net45+sl50+wp8+MonoAndroid+MonoTouch\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
